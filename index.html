@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greisy's Cakes | Pastelería y Cupcakes en Tapachula</title>
+    <meta name="description" content="Catálogo digital de Greisy's Cakes en Tapachula. Pasteles en vitrina, cupcakes, postres y pasteles personalizados con anticipación.">
+    <!-- Tipografías redondeadas y dulces (diferentes a las otras páginas) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="contenedor nav-contenido">
+            <a href="#" class="logo">🦉🧁 Greisy's<span>Cakes</span></a>
+            <nav class="nav-enlaces">
+                <a href="#catalogo">Vitrina y Catálogo</a>
+                <a href="#anticipa">Pedidos Especiales</a>
+                <a href="#ubicacion">Ubicación y Horario</a>
+            </nav>
+            <a href="#catalogo" class="btn-nav">Ver Pasteles</a>
+        </div>
+    </header>
+
+    <!-- NUEVA PORTADA A 2 COLUMNAS (SPLIT HERO) -->
+    <section class="hero-split">
+        <div class="contenedor hero-grid">
+            <div class="hero-texto">
+                <span class="badge-aviso">✨ Pasteles en vitrina y pedidos con anticipación</span>
+                <h1>Endulza tu celebración con <span>Greisy's Cakes</span></h1>
+                <p>Explora nuestra vitrina digital de pasteles, cupcakes y postres recién hechos, o cotiza tu pastel personalizado directo por WhatsApp.</p>
+                <div class="hero-botones">
+                    <a href="#catalogo" class="btn-primario">Explorar Catálogo 🎂</a>
+                    <a href="#" id="btn-hero-whatsapp" target="_blank" class="btn-secundario">Cotizar Diseño</a>
+                </div>
+                <div class="hero-datos-rapidos">
+                    <div>🕘 <strong>Abierto hasta las 9:00 PM</strong></div>
+                    <div>📍 <strong>Col. Los Naranjos, Centro</strong></div>
+                </div>
+            </div>
+            <div class="hero-imagen-Marco">
+                <div class="marco-arco">
+                    <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=900&q=80" alt="Pasteles y Cupcakes Greisy's Cakes">
+                </div>
+                <div class="tarjeta-flotante">
+                    <span>🧁 Recién horneados</span>
+                    <strong>¡Listos en vitrina o sobre pedido!</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DEL CATÁLOGO CON BUSCADOR EN VIVO -->
+    <section id="catalogo" class="seccion-catalogo contenedor">
+        <div class="encabezado-catalogo">
+            <h2>Nuestra Vitrina Digital</h2>
+            <p>Filtra por categoría o busca tu sabor favorito. Toca cualquier opción para ver cuántas porciones rinde.</p>
+            
+            <!-- Barra de búsqueda nueva -->
+            <div class="buscador-caja">
+                <span class="icono-buscar">🔍</span>
+                <input type="text" id="input-buscador" placeholder="Buscar pastel, cupcake, chocolate, fresa, 3 leches...">
+            </div>
+        </div>
+
+        <!-- Botones de Filtro -->
+        <div class="filtros-contenedor">
+            <button class="btn-filtro activo" data-categoria="todos">Todos (20)</button>
+            <button class="btn-filtro" data-categoria="vitrina">Listos en Vitrina</button>
+            <button class="btn-filtro" data-categoria="cupcakes">Cupcakes y Postres</button>
+            <button class="btn-filtro" data-categoria="personalizados">Sobre Pedido (Con Anticipación)</button>
+            <button class="btn-filtro" data-categoria="eventos">Infantiles y Eventos</button>
+        </div>
+
+        <!-- Cuadrícula de productos -->
+        <div id="catalogo-grid" class="catalogo-grid"></div>
+    </section>
+
+    <!-- SECCIÓN: HAZ TUS PEDIDOS CON ANTICIPACIÓN -->
+    <section id="anticipa" class="seccion-anticipa contenedor">
+        <div class="caja-anticipa">
+            <div class="anticipa-icono">🦉🎂</div>
+            <div class="anticipa-texto">
+                <h2>¡Haz tus pedidos personalizados con anticipación!</h2>
+                <p>¿Tienes un cumpleaños, aniversario o evento especial? Mándanos la foto o idea del pastel que te gustaría, dinos para cuántas personas lo necesitas y lo horneamos a tu gusto.</p>
+            </div>
+            <a href="#" id="btn-whatsapp-personalizado" target="_blank" class="btn-whatsapp-blanco">
+                Mandar Idea por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN Y CONTACTO -->
+    <section id="ubicacion" class="seccion-ubicacion">
+        <div class="contenedor">
+            <div class="info-ubicacion-grid">
+                <div class="tarjeta-contacto">
+                    <h3>📍 Visítanos en Sucursal</h3>
+                    <p id="texto-direccion" class="direccion-destacada"></p>
+                    <p class="horario-texto">🕘 <strong>Horario:</strong> Abierto todos los días · Cierra a las 9:00 p.m.</p>
+                    <p class="nota-mapa">Toca los botones de abajo para ver la ubicación exacta en Google Maps o llamarnos al local:</p>
+                    
+                    <div class="botones-contacto">
+                        <a href="#" id="btn-google-maps" target="_blank" class="btn-maps">
+                            <svg viewBox="0 0 24 24" width="22" height="22">
+                                <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                            </svg>
+                            Abrir en Google Maps
+                        </a>
+
+                        <a href="#" id="btn-llamar" class="btn-llamar">
+                            📞 Llamar: <span id="numero-visible"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 Greisy's Cakes · Tapachula, Chiapas. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- VENTANA EMERGENTE (MODAL) -->
+    <div id="modal-ramo" class="modal-fondo">
+        <div class="modal-contenido">
+            <button id="cerrar-modal" class="modal-cerrar" aria-label="Cerrar">&times;</button>
+            <div class="modal-cuerpo">
+                <div class="modal-imagen-contenedor">
+                    <span id="modal-etiqueta" class="etiqueta-estado"></span>
+                    <img id="modal-img" src="" alt="Foto del pastel">
+                </div>
+                <div class="modal-info">
+                    <span id="modal-categoria" class="modal-cat-texto"></span>
+                    <h2 id="modal-titulo">Nombre del Pastel</h2>
+                    <p id="modal-precio" class="modal-precio">$0 MXN</p>
+                    
+                    <div class="modal-seccion">
+                        <h4>Descripción:</h4>
+                        <p id="modal-descripcion"></p>
+                    </div>
+
+                    <div class="modal-seccion">
+                        <h4>🧁 Porciones y características:</h4>
+                        <ul id="modal-flores" class="lista-detalles"></ul>
+                    </div>
+
+                    <a href="#" id="modal-btn-whatsapp" target="_blank" class="btn-whatsapp-modal">
+                        Pedir este pastel por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="#" id="btn-whatsapp-flotante" target="_blank" class="whatsapp-flotante">
+        <span>💬 ¿Dudas o pedidos? Escríbenos</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
